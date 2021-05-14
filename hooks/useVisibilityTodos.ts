@@ -1,7 +1,7 @@
 import { VisibilityFilters } from '../constants/Filter'
 import { useState, useEffect} from "react";
 
-export const useVisibilityTodos = (todos= [], filterBy = VisibilityFilters.SHOW_ALL ) => {
+const useVisibilityTodos = (todos= [], filterBy = VisibilityFilters.SHOW_ALL ) => {
   const [visibilityTodos, setVisibilityTodos] = useState(todos)
   useEffect(() => {
     switch (filterBy) { 
@@ -22,3 +22,5 @@ export const useVisibilityTodos = (todos= [], filterBy = VisibilityFilters.SHOW_
       visibilityTodos,
     }
 }
+
+export default useVisibilityTodos;

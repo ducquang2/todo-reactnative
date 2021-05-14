@@ -1,7 +1,7 @@
 import { VisibilityFilters } from '../constants/Filter'
 import { useState } from "react";
 
-export const useFilterBy = (value = VisibilityFilters.SHOW_ALL ) => {
+const useFilterBy = (value = VisibilityFilters.SHOW_ALL ) => {
     const [filterBy, setFilterBy] = useState(value); 
     
     return {
@@ -9,3 +9,5 @@ export const useFilterBy = (value = VisibilityFilters.SHOW_ALL ) => {
       changeFilter: (value:any) => setFilterBy(value)
     }
 }
+
+export default useFilterBy

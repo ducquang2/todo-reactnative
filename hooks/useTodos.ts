@@ -5,7 +5,7 @@ const getTodoList = () => {
   return todoListLocal ? JSON.parse(todoListLocal) : [];
 };
 
-export const useTodos = (initialTodos = getTodoList()) => {
+const useTodos = (initialTodos = getTodoList()) => {
   const [todos, setTodos] = useState(initialTodos);
   useEffect(() => { 
     localStorage.setItem("todo-list", JSON.stringify(todos));
@@ -43,3 +43,5 @@ export const useTodos = (initialTodos = getTodoList()) => {
     },
   };
 };
+
+export default useTodos;
